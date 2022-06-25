@@ -127,7 +127,7 @@ app.post("/addcontact", async (req, res) => {
     console.log(err);
   }
 });
-
+// get contacts for specific id
   app.post("/getcontacts", async (req, res) => {    
     const contact = await Contact.find({ userid : req.body.userid });
     try {
@@ -138,11 +138,12 @@ app.post("/addcontact", async (req, res) => {
   }
 });
 
-
+// search for specific number or 
 app.post("/search", async (req, res) => {    
     const contact = await Contact.find({
         "$or":[
             {number:req.body.number },
+            {name:req.body.name }
         ] });
     try {
     res.send(contact);
