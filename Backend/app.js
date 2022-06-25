@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const User = require("./model/user");
+const Contact = require("./model/contact");
 // Logic goes here
 app.post("/register", async (req, res) => {
 
@@ -104,4 +105,17 @@ app.post("/welcome", auth, (req, res) => {
   res.status(200).send("Welcome 🙌 ");
 });
 
+app.post("/addcontact", async (req, res) => {
+      const contact = new Contact(req.body) ;    
+      const oldContact = await Contact.findOne({userid:req.body.userid , number:req.body.number });
+      if (oldContact) {
+        return res.status(409).send("Contact Already Exist. Please Login");
+      }
+      try {
+        contact.save();
+      res.status(201).json(contact);
+    }catch (err) {
+      console.log(err);
+    }
+  });
 module.exports = app;
