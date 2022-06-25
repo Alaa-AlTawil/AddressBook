@@ -118,4 +118,14 @@ app.post("/addcontact", async (req, res) => {
       console.log(err);
     }
   });
+
+  app.post("/getcontacts", async (req, res) => {    
+    const contact = await Contact.find({ userid : req.body.userid });
+    try {
+    res.send(contact);
+    res.status(201).json(contact);
+  }catch (err) {
+    console.log(err);
+  }
+});
 module.exports = app;
