@@ -139,5 +139,16 @@ app.post("/addcontact", async (req, res) => {
 });
 
 
-
+app.post("/search", async (req, res) => {    
+    const contact = await Contact.find({
+        "$or":[
+            {number:req.body.number },
+        ] });
+    try {
+    res.send(contact);
+    res.status(201).json(contact);
+  }catch (err) {
+    console.log(err);
+  }
+});
 module.exports = app;
