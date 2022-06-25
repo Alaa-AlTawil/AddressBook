@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+
+.header{
+  background-color: black;
+  color: white;
+}
+#Container{
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+  width:80%;
+  display: flex;
+  justify-content: space-around;
+  
+
+}
+.survey{
+  border-width:1px;
+  border-color: black;
+  margin-top: 10px;
+  border: solid;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  background-color: #61dafb;
+}
+.remove{
+  height: 20%;
+  background-color: black;
+}
+.main_survey{
+  height: 50%;
+  background-color: #61dafb;
+}
+.btn{
+  background-color:brown;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover{
+  opacity: 90%;
+}

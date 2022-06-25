@@ -1,10 +1,13 @@
+const express = require("express");
+const app = express();
+const cors = require("cors");
+app.use(cors());
 require("dotenv").config();
 require("./config/database").connect();
-const express = require("express");
+
 const jwt=require("jsonwebtoken");
 const bcrypt=require("bcryptjs");
 
-const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
