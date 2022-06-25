@@ -104,7 +104,7 @@ app.post("/register", async (req, res) => {
 app.post("/welcome", auth, (req, res) => {
   res.status(200).send("Welcome 🙌 ");
 });
-
+// add contact
 app.post("/addcontact", async (req, res) => {
       const contact = new Contact(req.body) ;    
       const oldContact = await Contact.findOne({userid:req.body.userid , number:req.body.number });
@@ -142,8 +142,8 @@ app.post("/addcontact", async (req, res) => {
 app.post("/search", async (req, res) => {    
     const contact = await Contact.find({
         "$or":[
-            {number:req.body.number },
-            {name:req.body.name }
+            {name:{$regex:req.body.name}},
+         //   {number:req.body.number }
         ] });
     try {
     res.send(contact);
