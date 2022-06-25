@@ -118,6 +118,15 @@ app.post("/addcontact", async (req, res) => {
       console.log(err);
     }
   });
+  //delete contact
+  app.delete("/deletecontact", async (req, res) => {    
+    const contact = await Contact.findOne({_id: req.body._id }).deleteOne();
+    try {
+    res.send("deleted");
+  }catch (err) {
+    console.log(err);
+  }
+});
 
   app.post("/getcontacts", async (req, res) => {    
     const contact = await Contact.find({ userid : req.body.userid });
@@ -128,4 +137,7 @@ app.post("/addcontact", async (req, res) => {
     console.log(err);
   }
 });
+
+
+
 module.exports = app;
