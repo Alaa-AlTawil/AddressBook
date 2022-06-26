@@ -1,7 +1,9 @@
 import React from 'react';
+import Header from './Header';
 import Button from './Button'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom';
+
 
 
 function Login() {
@@ -22,11 +24,13 @@ function Login() {
     }
     return (  
         <div className="login">
+            <Header/>
+            <div>
             <h1>Login</h1>
                 <div><input id="email" type={'Email'} placeholder='Email'/></div>
                 <div><input id="password" type={'Password'} placeholder='password'/></div>
                 <div><Button className="btn" text={'login'} onclick={()=>{loginfunction()}} /></div>
-                
+                </div>
         </div>
     );
 }

@@ -51,15 +51,22 @@
   
 
 }
+.view{
+  display: flex;
+  flex-wrap: wrap;
+
+}
 .survey{
   border-width:1px;
-  border-color: black;
-  margin-top: 10px;
+  border-color: aqua;
+  margin: 20px;
   border: solid;
-  height: 80px;
+  height: 150px;
   display: flex;
+  width: 150px;
   flex-direction: column;
-  background-color: black;
+  background-color: aqua;
+  border-radius: 10px;
 }
 .login{
   display: flex;
