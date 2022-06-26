@@ -7,7 +7,7 @@ const ContactSchema = new mongoose.Schema({
   email: { type: String},
   number: { type: Number , trim:true},
   location: { 
-    long:{type:Number},
+    lng:{type:Number},
     lat:{type:Number}
   },
 });

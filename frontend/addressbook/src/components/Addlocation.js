@@ -13,9 +13,12 @@ const App = () => {
   const [zoom, setZoom] = useState(DefaultZoom);
 
   function handleChangeLocation (lat, lng){
+    console.log("helkaofnkjasc")
     setLocation({lat:lat, lng:lng});
-    localStorage.setItem("lat",lat);
+    
     localStorage.setItem("lng",lng);
+    localStorage.setItem("lat",lat);
+    
   }
   
   function handleChangeZoom (newZoom){
@@ -30,14 +33,14 @@ const App = () => {
   return (
     <>
   <button onClick={handleResetLocation}>Reset Location</button>
-  <label>Latitute:</label><input type='text' value={location.lat} disabled/>
+  <label>Latitute:</label><input  type='text' value={location.lat} disabled/>
   <label>Longitute:</label><input type='text' value={location.lng} disabled/>
   <label>Zoom:</label><input type='text' value={zoom} disabled/>
   
   <MapPicker defaultLocation={defaultLocation}
     zoom={zoom}
     mapTypeId="roadmap"
-    style={{height:'700px'}}
+    style={{height:'300px'}}
     onChangeLocation={handleChangeLocation} 
     onChangeZoom={handleChangeZoom}
     apiKey='AIzaSyD07E1VvpsN_0FvsmKAj4nK9GnLq-9jtj8'/>
