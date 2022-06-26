@@ -23,7 +23,7 @@ function addContact() {
             <input id="fullname" type={'text'} placeholder='fullname'/>
             <input id="number" type={'text'} placeholder='number'/>
             <input id="status" type={'text'} placeholder='status'/>
-            <Button text="add" onclick={()=>{
+            <Button className="btn" text="add" onclick={()=>{
                 add()
             }}/>
         </div>

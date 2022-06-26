@@ -8,9 +8,11 @@ export default function Home(){
     return <Map/>;
 }
 function Map(){
+    const center=useMemo(()=>({lat:33.8547,lng:35.8623}))
     return(
-        <GoogleMap zoom={10} center={{lat:44,lng:49}} mapContainerClassName="map_container">
-            <Marker position={{lat:44,lng:49}}/>
+        
+        <GoogleMap zoom={10} center={center} mapContainerClassName="map_container">
+            <Marker position={center}/>
         </GoogleMap>
 
     )
