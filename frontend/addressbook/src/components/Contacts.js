@@ -27,7 +27,7 @@ function Contacts() {
       
         <div>
           <Header/>
-          <Button text="add contact" onclick={()=>{AddContact()}}/>
+          <Button className="btn" text="add contact" onclick={()=>{AddContact()}}/>
           <div className="view">
           {
                 arr.map((value,index)=>{

@@ -4,6 +4,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Contacts from './components/Contacts' 
 import AddContact from './components/AddContact';
 import Register from './components/Register';
+import Map from './components/Map'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/contacts" element={<Contacts/>}></Route>
       <Route path="/addcontact" element={<AddContact/>}></Route>
       <Route path="/register" element={<Register/>}></Route>
+      <Route path="/map" element={<Map/>}></Route>
       </Routes>
     </div>
     </BrowserRouter>

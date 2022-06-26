@@ -15,6 +15,7 @@ function Register() {
         .then(res=>{
             console.log("done")
         })
+        
     }
     return ( 
         <div className="login">

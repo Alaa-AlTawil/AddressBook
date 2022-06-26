@@ -13,6 +13,7 @@ function addContact() {
         .then(res => {
             console.log("done") 
         })
+        window.location.reload();
     }
     return ( 
         <div>
