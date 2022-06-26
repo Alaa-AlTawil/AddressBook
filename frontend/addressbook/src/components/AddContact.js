@@ -2,6 +2,7 @@ import React from 'react';
 import Button from './Button';
 import Header from './Header';
 import axios from 'axios';
+import Addlocation from './Addlocation'
 
 function addContact() {
     function add(){
@@ -23,6 +24,7 @@ function addContact() {
             <input id="fullname" type={'text'} placeholder='fullname'/>
             <input id="number" type={'text'} placeholder='number'/>
             <input id="status" type={'text'} placeholder='status'/>
+            <Addlocation/>
             <Button className="btn" text="add" onclick={()=>{
                 add()
             }}/>
