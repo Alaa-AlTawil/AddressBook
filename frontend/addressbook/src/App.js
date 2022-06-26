@@ -3,6 +3,7 @@ import Login from './components/Login'
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Contacts from './components/Contacts' 
 import AddContact from './components/AddContact';
+import Register from './components/Register';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Route path="/" element={<Login/>}></Route>
       <Route path="/contacts" element={<Contacts/>}></Route>
       <Route path="/addcontact" element={<AddContact/>}></Route>
-
+      <Route path="/register" element={<Register/>}></Route>
       </Routes>
     </div>
     </BrowserRouter>

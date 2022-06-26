@@ -143,11 +143,13 @@ app.post("/addcontact", async (req, res) => {
 
 // search for specific number or 
 app.post("/search", async (req, res) => {    
-    const contact = await Contact.find({
-        "$or":[
+    const contact = await Contact.find({userid:req.body.userid,
+        "$or":
+        [
             {name:{$regex:req.body.name}},
-         //   {number:req.body.number }
-        ] });
+         
+     ]
+       });
     try {
     res.send(contact);
     res.status(201).json(contact);
