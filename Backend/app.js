@@ -122,7 +122,7 @@ app.post("/addcontact", async (req, res) => {
     }
   });
   //delete contact
-  app.delete("/deletecontact", async (req, res) => {    
+  app.post("/deletecontact", async (req, res) => {    
     const contact = await Contact.findOne({_id: req.body._id }).deleteOne();
     try {
     res.send("deleted");

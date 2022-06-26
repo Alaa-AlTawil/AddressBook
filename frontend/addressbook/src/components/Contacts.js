@@ -32,7 +32,7 @@ function Contacts() {
           {
                 arr.map((value,index)=>{
                     return (
-                        <Contact key={index} name={value["name"]} number={value["number"]} status={value["status"]} email={value["email"]} id={value["id"]} />
+                        <Contact key={index} name={value["name"]} number={value["number"]} status={value["status"]} email={value["email"]} id={value["_id"]} />
                     )
                 })
             }
