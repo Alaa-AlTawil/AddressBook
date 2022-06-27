@@ -156,7 +156,7 @@ app.post("/search", async (req, res) => {
     const contact = await Contact.find({userid:req.body.userid,
         "$or":
         [
-            {name:{$regex:req.body.name}},
+            {name:{$regex:req.body.name},userid:req.body.userid},
          
      ]
        });
