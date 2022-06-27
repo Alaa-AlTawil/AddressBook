@@ -6,7 +6,7 @@ function GoogleMap(){
         const lat=localStorage.getItem("finallat")
         const lng=localStorage.getItem("finallng")
         iframedata.src=`https://maps.google.com/maps?q=${lat},${lng}&hl=es;&output=embed`
-    })
+    },[])
 return(
     <div>
         <iframe id="iframeId" height="500px" width="100%"></iframe>
