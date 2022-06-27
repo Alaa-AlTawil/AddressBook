@@ -140,6 +140,16 @@ app.post("/addcontact", async (req, res) => {
     console.log(err);
   }
 });
+//get location
+app.post("/getlocation", async (req, res) => {    
+  const contact = await Contact.find({ _id : req.body._id });
+  try {
+  res.send(contact[0]['location']);
+  res.status(201)
+}catch (err) {
+  console.log(err);
+}
+});
 
 // search for specific number or 
 app.post("/search", async (req, res) => {    
