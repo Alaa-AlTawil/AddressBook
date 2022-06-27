@@ -11,8 +11,6 @@ return(
     <div>
         
     </div>
-
-
 )
 }
 export default WhatsApp;

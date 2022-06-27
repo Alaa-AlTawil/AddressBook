@@ -4,7 +4,7 @@ import email from '../assets/email.png'
 import networking from '../assets/networking.png'
 import placeholder from '../assets/placeholder.png'
 import user from '../assets/user.png'
-import telephone from '../assets/telephone.png'
+import whatsapp from '../assets/whatsapp.png'
 import cutlery from '../assets/pieces-of-cutlery.png'
 
 import {useNavigate} from 'react-router-dom';
@@ -25,7 +25,7 @@ function Contact(props) {
                 await localStorage.setItem("phone",props.number)
                 navigate('/whatsapp')   
                 
-            }}><img src={telephone}></img> :{props.number}</div>
+            }}><img src={whatsapp}></img> :{props.number}</div>
             <div className="size"><img src={email}></img> :{props.email}</div>
             <div className="size"><img src={networking}></img> :{props.status}</div>
             <div className="size" onClick={async ()=>{
