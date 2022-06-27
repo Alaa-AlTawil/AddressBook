@@ -26,6 +26,12 @@ function Contact(props) {
             <div className="size"><img src={email}></img> :{props.email}</div>
             <div className="size"><img src={networking}></img> :{props.status}</div>
             <div className="size" onClick={()=>{
+                 axios.post(`http://127.0.0.1:4001/getlocation`, {_id:props.id})
+                 .then(res=>{
+                    localStorage.setItem("finallng",res.data["lng"])
+                    localStorage.setItem("finallat",res.data["lat"])
+                    
+                 })
                 navigate('/map')
             }}><img  src={placeholder}></img></div>
             <div  className="size" onClick={()=>{
