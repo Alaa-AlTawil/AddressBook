@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from './Button'
 import axios from 'axios';
 import email from '../assets/email.png'
 import networking from '../assets/networking.png'
@@ -22,7 +21,11 @@ function Contact(props) {
     return (
         <div className='survey' id={props.id} onClick={props.click}>
             <div className="size"><img src={user}></img> :{props.name}</div>
-            <div className="size"><img src={telephone}></img> :{props.number}</div>
+            <div className="size" onClick={async()=>{
+                await localStorage.setItem("phone",props.number)
+                navigate('/whatsapp')   
+                
+            }}><img src={telephone}></img> :{props.number}</div>
             <div className="size"><img src={email}></img> :{props.email}</div>
             <div className="size"><img src={networking}></img> :{props.status}</div>
             <div className="size" onClick={async ()=>{

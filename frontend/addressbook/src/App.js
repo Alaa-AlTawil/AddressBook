@@ -5,6 +5,7 @@ import Contacts from './components/Contacts'
 import AddContact from './components/AddContact';
 import Register from './components/Register';
 import Map from './components/Map'
+import WhatsApp from './components/Whatsapp';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/addcontact" element={<AddContact/>}></Route>
       <Route path="/register" element={<Register/>}></Route>
       <Route path="/map" element={<Map/>}></Route>
+      <Route path="/whatsapp" element={<WhatsApp/>}></Route>
       </Routes>
     </div>
     </BrowserRouter>
