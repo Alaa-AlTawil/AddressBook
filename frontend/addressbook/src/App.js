@@ -6,6 +6,7 @@ import AddContact from './components/AddContact';
 import Register from './components/Register';
 import Map from './components/Map'
 import WhatsApp from './components/Whatsapp';
+import Search from './components/Search'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/register" element={<Register/>}></Route>
       <Route path="/map" element={<Map/>}></Route>
       <Route path="/whatsapp" element={<WhatsApp/>}></Route>
+      <Route path="/search" element={<Search/>}></Route>
       </Routes>
     </div>
     </BrowserRouter>

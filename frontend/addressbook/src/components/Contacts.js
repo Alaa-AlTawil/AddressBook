@@ -27,6 +27,8 @@ function Contacts() {
       
         <div>
           <Header/>
+          <Button className="btn" text="Search" onclick={()=>{ navigate('/search')
+    }}/>
           <Button className="btn" text="add contact" onclick={()=>{AddContact()}}/>
           <div className="view">
           {
